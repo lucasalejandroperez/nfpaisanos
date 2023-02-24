@@ -3,7 +3,7 @@ import { PopularPaisanosMainImageContainer } from './PopularPaisanosMainImage.el
 
 export const PopularPaisanosMainImage = (): JSX.Element => {
 	const { loading, data, popularPaisanoSelectedIndex } = useAppSelector(
-		state => state.paisanos.popularPaisanos
+		state => state.auction.popularPaisanos
 	);
 
 	if (loading) {

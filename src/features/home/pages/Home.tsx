@@ -1,7 +1,7 @@
 // import { Auctions } from '../components/Auctions/Auctions';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../hooks/redux-hooks';
-import { getPopularPaisanos } from '../../../redux/slices/paisanosSlice';
+import { getPopularPaisanos } from '../../../redux/slices/auctionSlice';
 import { Auctions } from '../components/Auctions/Auctions';
 import { Header } from '../components/Header/Header';
 import { HeaderFilters } from '../components/HeaderFilters/HeaderFilters';
@@ -21,7 +21,7 @@ export const Home = (): JSX.Element => {
 		// data,
 		loading: loadingPopularPaisanos,
 		// error, SHOW A TOAST WITH ERROR
-	} = useAppSelector(state => state.paisanos.popularPaisanos);
+	} = useAppSelector(state => state.auction.popularPaisanos);
 
 	useEffect(() => {
 		dispatch(getPopularPaisanos());

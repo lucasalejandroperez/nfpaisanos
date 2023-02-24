@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Pill } from '../../../../components/Pill/Pill.elements';
 import { useAppDispatch } from '../../../../hooks/redux-hooks';
-import { filterByCreatedDate } from '../../../../redux/slices/paisanosSlice';
+import { filterByCreatedDate } from '../../../../redux/slices/auctionSlice';
 import { mainTheme } from '../../../../styles/theme';
 import {
 	HeaderFilterContainer,

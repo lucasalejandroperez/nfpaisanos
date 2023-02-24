@@ -11,7 +11,7 @@ import { ImageDetail } from './ImageDetail';
 import {
 	nextPopularPaisano,
 	previousPopularPaisano,
-} from '../../../../redux/slices/paisanosSlice';
+} from '../../../../redux/slices/auctionSlice';
 import {
 	AvatarDetailContainer,
 	ButtonsContainer,
@@ -21,7 +21,7 @@ import {
 
 export const PopularPaisanosDetail = (): JSX.Element => {
 	const { loading, data, popularPaisanoSelectedIndex } = useAppSelector(
-		state => state.paisanos.popularPaisanos
+		state => state.auction.popularPaisanos
 	);
 
 	const dispatch = useAppDispatch();

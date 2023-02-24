@@ -40,7 +40,7 @@ const initialState: PaisanosSliceInitialStateProps = {
 };
 
 export const getPopularPaisanos = createAsyncThunk<IAuction[]>(
-  'paisanos/getPopularPaisanos',
+  'auction/getPopularPaisanos',
   async (_, { rejectWithValue }) => {
     try {
       const response = popularPaisanosMock;
@@ -53,7 +53,7 @@ export const getPopularPaisanos = createAsyncThunk<IAuction[]>(
 );
 
 export const getAuctions = createAsyncThunk<IAuction[]>(
-  'paisanos/getAuctions',
+  'auction/getAuctions',
   async (_, { rejectWithValue }) => {
     try {
       const response = auctionsMock;
@@ -65,8 +65,8 @@ export const getAuctions = createAsyncThunk<IAuction[]>(
   },
 );
 
-const paisanosSlice = createSlice({
-  name: 'paisanos',
+const auctionSlice = createSlice({
+  name: 'auction',
   initialState,
   reducers: {
     nextPopularPaisano: (state) => {
@@ -131,7 +131,7 @@ export const {
   resetFilters,
   filterByPrice,
   filterByCreatedDate
-} = paisanosSlice.actions;
+} = auctionSlice.actions;
 
-export default paisanosSlice.reducer;
+export default auctionSlice.reducer;
 

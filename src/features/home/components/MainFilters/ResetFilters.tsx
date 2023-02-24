@@ -1,5 +1,5 @@
 import { useAppDispatch } from '../../../../hooks/redux-hooks';
-import { resetFilters } from '../../../../redux/slices/paisanosSlice';
+import { resetFilters } from '../../../../redux/slices/auctionSlice';
 import { ResetFilterContainer } from './ResetFilter.elements';
 
 export const ResetFilters = () => {

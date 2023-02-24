@@ -2,11 +2,11 @@ import { Auction } from './Auction';
 import { AuctionsContainer, NoResultsContainer } from './Auctions.elements';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../hooks/redux-hooks';
-import { getAuctions } from '../../../../redux/slices/paisanosSlice';
+import { getAuctions } from '../../../../redux/slices/auctionSlice';
 
 export const Auctions = (): JSX.Element => {
 	const { loading, dataFiltered } = useAppSelector(
-		state => state.paisanos.auctions
+		state => state.auction.auctions
 	);
 
 	const dispatch = useAppDispatch();

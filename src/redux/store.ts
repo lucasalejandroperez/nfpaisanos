@@ -1,11 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
-import paisanosReducer from './slices/paisanosSlice';
+import auctionReducer from './slices/auctionSlice';
 import bidReducer from './slices/bidSlice';
 
 
 export const store = configureStore({
   reducer: {
-    paisanos: paisanosReducer,
+    auction: auctionReducer,
     bid: bidReducer,
   },
 })

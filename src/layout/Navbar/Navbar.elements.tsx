@@ -39,7 +39,7 @@ export const LogoContainer = styled.div`
 	letter-spacing: 2px;
 	cursor: pointer;
 
-	p {
+	a {
 		transition: all 0.5s ease;
 		margin-left: 8px;
 		font-family: 'Poppins';
@@ -48,6 +48,7 @@ export const LogoContainer = styled.div`
 		font-size: 24px;
 		line-height: 32px;
 		letter-spacing: -0.02em;
+		text-decoration: none;
 		color: ${mainTheme.primaryColor};
 
 		&:nth-child(2) {
@@ -223,4 +224,15 @@ export const WalletContainer = styled.div`
 	color: ${mainTheme.secondaryColor};
 `;
 
-export const Item = styled(motion.div)``;
+export const Item = styled(motion.div)`
+	a {
+		font-family: 'DM Sans';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 16px;
+		text-align: center;
+		text-decoration: none;
+		color: ${mainTheme.primaryColor};
+	}
+`;

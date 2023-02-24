@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import { IconContext } from 'react-icons';
 import {
@@ -54,7 +55,7 @@ export const Navbar = () => {
 							width='38'
 							height='38'
 						/>
-						<p>NFPaisanos</p>
+						<Link to='/'>NFPaisanos</Link>
 					</LogoContainer>
 
 					<MobileIcon onClick={() => setShowMobileMenu(!showMobileMenu)}>
@@ -75,7 +76,7 @@ export const Navbar = () => {
 										rotate: 90,
 									}}
 								>
-									Discover
+									<Link to='/discover'>Discover</Link>
 								</Item>
 							</MenuItemLink>
 						</MenuItem>
@@ -91,7 +92,7 @@ export const Navbar = () => {
 										rotate: 90,
 									}}
 								>
-									What we do
+									<Link to='/whatwedo'>What we do</Link>
 								</Item>
 							</MenuItemLink>
 						</MenuItem>

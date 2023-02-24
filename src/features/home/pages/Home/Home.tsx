@@ -1,13 +1,13 @@
 // import { Auctions } from '../components/Auctions/Auctions';
 import { useEffect } from 'react';
-import { useAppDispatch, useAppSelector } from '../../../hooks/redux-hooks';
-import { getPopularPaisanos } from '../../../redux/slices/auctionSlice';
-import { Auctions } from '../components/Auctions/Auctions';
-import { Header } from '../components/Header/Header';
-import { HeaderFilters } from '../components/HeaderFilters/HeaderFilters';
-import { MainFilters } from '../components/MainFilters/MainFilters';
-import { PopularPaisanos } from '../components/PopularPaisanos/PopularPaisanos';
-import { TextFilter } from '../components/TextFilter/TextFilter';
+import { useAppDispatch, useAppSelector } from '../../../../hooks/redux-hooks';
+import { getPopularPaisanos } from '../../../../redux/slices/auctionSlice';
+import { Auctions } from '../../components/Auctions/Auctions';
+import { Header } from '../../components/Header/Header';
+import { HeaderFilters } from '../../components/HeaderFilters/HeaderFilters';
+import { MainFilters } from '../../components/MainFilters/MainFilters';
+import { PopularPaisanos } from '../../components/PopularPaisanos/PopularPaisanos';
+import { TextFilter } from '../../components/TextFilter/TextFilter';
 import {
 	AuctionContent,
 	HomeContainer,

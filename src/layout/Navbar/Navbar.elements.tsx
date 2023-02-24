@@ -106,7 +106,6 @@ export const MenuItemLink = styled.div`
 	text-decoration: none;
 	height: 100%;
 	padding: 0.5rem 1.5rem;
-	// color: ${mainTheme.primaryColor};
 	color: 'yellow';
 	font-family: sans-serif;
 	font-size: 0.8rem;
@@ -116,7 +115,6 @@ export const MenuItemLink = styled.div`
 
 	&:hover {
 		background-color: transparent;
-		/* color: mainTheme.textColor}; */
 		color: 'orange';
 		transition: 0.5s all ease;
 

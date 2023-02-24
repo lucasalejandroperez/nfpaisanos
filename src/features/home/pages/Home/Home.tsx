@@ -17,11 +17,9 @@ import {
 export const Home = (): JSX.Element => {
 	const dispatch = useAppDispatch();
 
-	const {
-		// data,
-		loading: loadingPopularPaisanos,
-		// error, SHOW A TOAST WITH ERROR
-	} = useAppSelector(state => state.auction.popularPaisanos);
+	const { loading: loadingPopularPaisanos } = useAppSelector(
+		state => state.auction.popularPaisanos
+	);
 
 	useEffect(() => {
 		dispatch(getPopularPaisanos());
@@ -33,7 +31,6 @@ export const Home = (): JSX.Element => {
 
 			{loadingPopularPaisanos ? `Loading popular...` : <PopularPaisanos />}
 
-			{/* MAIN CONTENT */}
 			<MainContentContainer>
 				<TextFilter />
 				<HeaderFilters />

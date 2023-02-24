@@ -12,7 +12,6 @@ export default Api;
 
 Api.interceptors.response.use((response: any) => response,
   async (error:any) => {
-    // eslint-disable-next-line
     console.log(error);
   });
 

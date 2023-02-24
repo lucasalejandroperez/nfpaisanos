@@ -26,11 +26,11 @@ export const PopularPaisanosDetail = (): JSX.Element => {
 
 	const dispatch = useAppDispatch();
 
-	const leftSwiperClick = () => {
+	const leftSwiperClick = (): void => {
 		dispatch(previousPopularPaisano());
 	};
 
-	const rightSwiperClick = () => {
+	const rightSwiperClick = (): void => {
 		dispatch(nextPopularPaisano());
 	};
 

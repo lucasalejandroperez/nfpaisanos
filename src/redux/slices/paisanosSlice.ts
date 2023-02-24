@@ -1,9 +1,8 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import { auctionsMock } from '../../mocks/auctionsMocks';
 import { popularPaisanosMock } from '../../mocks/popularPaisanosMock';
-import _ from 'lodash';
-// import Api from '../../services/Api';
 import type { IAuction } from '../../types/auctionInterfaces';
+import _ from 'lodash';
 
 
 interface PopularPaisanosProps {
@@ -84,20 +83,16 @@ const paisanosSlice = createSlice({
         state.popularPaisanos.popularPaisanoSelectedIndex = previousIndex;
       }
     },
-    filterAuctionsByColor: (state, action) => {
-      state.auctions.dataFiltered = [...state.auctions.data].filter(auction => auction.attributes.color === action.payload);
-    },
-    orderAuctionsMostLikes: (state, action) => {
-      const auctions = [...state.auctions.dataFiltered];
-      state.auctions.dataFiltered = _.orderBy(auctions, 'likes', 'desc');
-    },
-    orderAuctionsLessLikes: (state, action) => {
-      const auctions = [...state.auctions.dataFiltered];
-      state.auctions.dataFiltered = _.orderBy(auctions, 'likes', 'asc');
-    },
     resetFilters: (state) => {
       state.auctions.dataFiltered = state.auctions.data;
     },
+    filterByCreatedDate: (state, action) => {
+      const auctions = [...state.auctions.dataFiltered];
+      state.auctions.dataFiltered = _.orderBy(auctions, 'createdAt', action.payload);
+    },
+    filterByPrice: (state, action) => {
+      state.auctions.dataFiltered = [...state.auctions.data].filter(auction => Number(auction.instantPrice.slice(0,-4)) < action.payload);
+    }
   },
   extraReducers: (builder) => {
     builder.addCase(getPopularPaisanos.pending, (state) => {
@@ -133,10 +128,9 @@ const paisanosSlice = createSlice({
 export const {
   nextPopularPaisano, 
   previousPopularPaisano, 
-  filterAuctionsByColor, 
-  orderAuctionsMostLikes, 
-  orderAuctionsLessLikes, 
-  resetFilters
+  resetFilters,
+  filterByPrice,
+  filterByCreatedDate
 } = paisanosSlice.actions;
 
 export default paisanosSlice.reducer;

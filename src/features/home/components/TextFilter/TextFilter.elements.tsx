@@ -3,8 +3,8 @@ import { mainTheme } from '../../../../styles/theme';
 
 export const TextFilterContainer = styled.div`
 	display: flex;
-	margin: 108px 0;
-	width: 1100px;
+	margin: 58px 0;
+	width: 1118px;
 
 	@media (max-width: 375px) {
 		margin: 24px 0;

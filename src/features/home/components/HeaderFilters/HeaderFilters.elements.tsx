@@ -6,9 +6,9 @@ export const HeaderFilterContainer = styled.div`
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	margin-top: 108px;
+	margin-top: 38px;
 	margin-bottom: 108px;
-	width: 1100px;
+	width: 1118px;
 
 	@media (max-width: 375px) {
 		flex-direction: column;

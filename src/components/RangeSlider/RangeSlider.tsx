@@ -1,14 +1,19 @@
 import Slider from 'react-rangeslider';
 import { useState } from 'react';
 import { RangeSliderContainer } from './RangeSlider.elements';
+import { useAppDispatch } from '../../hooks/redux-hooks';
+import { filterByPrice } from '../../redux/slices/paisanosSlice';
 
 export const RangeSlider = (): JSX.Element => {
 	const [horizontal, setHorizontal] = useState(50);
+	const dispatch = useAppDispatch();
 
 	const formatLabel = (value: number): string => `${value} ETH`;
 
 	const handleChangeHorizontal = (value: number) => {
 		setHorizontal(value);
+
+		dispatch(filterByPrice(value));
 	};
 
 	return (

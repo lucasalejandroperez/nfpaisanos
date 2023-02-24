@@ -21,7 +21,13 @@ export const Auction = ({ auction }: Props): JSX.Element => {
 			</AuctionImage>
 			<TitleAuction>
 				<span>Amazing art</span>
-				<Price>{auction.instantPrice}</Price>
+				<Price
+					whileHover={{
+						scale: 1.1,
+					}}
+				>
+					{auction.instantPrice}
+				</Price>
 			</TitleAuction>
 			<BidUsers auction={auction} />
 			<RowDivider />

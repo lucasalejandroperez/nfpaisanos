@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { Pill } from '../../../../components/Pill/Pill.elements';
+import { useAppDispatch } from '../../../../hooks/redux-hooks';
+import { filterByCreatedDate } from '../../../../redux/slices/paisanosSlice';
 import { mainTheme } from '../../../../styles/theme';
 import {
 	HeaderFilterContainer,
@@ -12,32 +14,26 @@ export type OptionValue = {
 	label: string;
 };
 const options: OptionValue[] = [
-	{ value: 'newest', label: 'Newest' },
-	{ value: 'oldest', label: 'Oldest' },
+	{ value: 'asc', label: 'Newest' },
+	{ value: 'desc', label: 'Oldest' },
 ];
 
 export const HeaderFilters = (): JSX.Element => {
-	const [selectedOrderOption] = useState(options[0]);
+	const [selectedOrderOption, setSelectedOrderOption] = useState(options[0]);
+	const dispatch = useAppDispatch();
+
+	const onChange = (newValue: any): any => {
+		setSelectedOrderOption(newValue);
+
+		dispatch(filterByCreatedDate(newValue.value));
+	};
 
 	return (
 		<HeaderFilterContainer>
-			{/* <SelectFilter
-				options={options}
-				defaultValue={selectedOrderOption}
-				styles={{
-					control: (baseStyles, state) => ({
-						...baseStyles,
-						borderColor: state.isFocused
-							? mainTheme.lightColor
-							: mainTheme.semiLightColor,
-						backgroundColor: mainTheme.contrastColor,
-						borderRadius: '12px',
-					}),
-				}}
-			/> */}
 			<SelectFilter
 				options={options}
 				defaultValue={selectedOrderOption}
+				onChange={onChange}
 				styles={{
 					control: (baseStyles, state) => ({
 						...baseStyles,

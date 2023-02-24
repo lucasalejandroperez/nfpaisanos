@@ -3,12 +3,6 @@ import { SelectFilter } from '../HeaderFilters/HeaderFilters.elements';
 import { ColorContainer, MainFiltersContainer } from './MainFilters.elements';
 import { ResetFilters } from './ResetFilters';
 import { useState } from 'react';
-import { useAppDispatch } from '../../../../hooks/redux-hooks';
-import {
-	filterAuctionsByColor,
-	orderAuctionsLessLikes,
-	orderAuctionsMostLikes,
-} from '../../../../redux/slices/paisanosSlice';
 import { mainTheme } from '../../../../styles/theme';
 import { RangeSlider } from '../../../../components/RangeSlider/RangeSlider';
 
@@ -18,6 +12,7 @@ const optionsLikes = [
 ];
 
 const optionsColors = [
+	{ value: 'all', label: 'All colors' },
 	{ value: 'black', label: 'Black' },
 	{ value: 'green', label: 'Green' },
 	{ value: 'pink', label: 'Pink' },
@@ -27,22 +22,17 @@ const optionsColors = [
 ];
 
 export const MainFilters = (): JSX.Element => {
-	const dispatch = useAppDispatch();
 	const [selectedOption, setSelectedOption] = useState(optionsColors[0]);
-	const [selectedLikesOption] = useState(optionsLikes[0]);
+	const [selectedLikesOption, setSelectedLikesOption] = useState(
+		optionsLikes[0]
+	);
 
 	const handleSelectedLikesChange = (newValue: any) => {
-		if (newValue.value === 'desc') {
-			dispatch(orderAuctionsMostLikes(newValue.value));
-		} else {
-			dispatch(orderAuctionsLessLikes(newValue.value));
-		}
+		setSelectedLikesOption(newValue);
 	};
 
 	const handleSelectedColorChange = (newValue: any): any => {
 		setSelectedOption(newValue);
-
-		dispatch(filterAuctionsByColor(newValue.value));
 	};
 
 	return (

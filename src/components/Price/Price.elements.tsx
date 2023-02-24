@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import { motion } from 'framer-motion';
 import { mainTheme } from '../../styles/theme';
 
-export const Price = styled.span`
+export const Price = styled(motion.span)`
 	display: flex;
 	flex-direction: row;
 	justify-content: center;

@@ -1,3 +1,8 @@
+# Important notes
+
+El endpoint que dejaron no se podía acceder por un tema de CORS, por lo cual mockie los datos, pero la única diferencia es en lugar de sacarlos del mock, pegarle directamente al endpoint.
+Otra opción hubiera sido que me cree un backend y desde ahí pegarle al endpoint pero no me dio el tiempo para hacerlo y creo que no agrega mucho valor eso.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

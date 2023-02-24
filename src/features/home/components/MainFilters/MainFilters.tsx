@@ -37,11 +37,9 @@ export const MainFilters = (): JSX.Element => {
 
 	return (
 		<MainFiltersContainer>
-			{/* PRICE RANGE FILTER COMPONENT */}
 			<RangeSlider />
 			<RowDivider />
 
-			{/* LIKES FILTER COMPONENT */}
 			<div>
 				<label htmlFor='likesSelect'>LIKES</label>
 				<SelectFilter
@@ -71,7 +69,6 @@ export const MainFilters = (): JSX.Element => {
 				/>
 			</div>
 
-			{/* COLOR FILTER COMPONENT */}
 			<ColorContainer>
 				<label htmlFor='colorsSelect'>COLORS</label>
 				<SelectFilter

@@ -1,4 +1,3 @@
-// import { Auctions } from '../components/Auctions/Auctions';
 import { useEffect } from 'react';
 import { useAppDispatch, useAppSelector } from '../../../../hooks/redux-hooks';
 import { getPopularPaisanos } from '../../../../redux/slices/auctionSlice';

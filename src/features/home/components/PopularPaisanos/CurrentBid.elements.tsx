@@ -80,7 +80,6 @@ export const AuctionEnding = styled.div`
 				text-align: center;
 				letter-spacing: -0.01em;
 				color: ${mainTheme.primaryColor};
-				// margin-right: 20px;
 			}
 
 			span:nth-child(2) {
@@ -91,7 +90,6 @@ export const AuctionEnding = styled.div`
 				line-height: 24px;
 				text-align: center;
 				color: ${mainTheme.lightColor};
-				// margin-right: 20px;
 			}
 		}
 	}

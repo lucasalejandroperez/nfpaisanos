@@ -5,7 +5,6 @@ export const AuctionContainer = styled.div`
 	display: flex;
 	flex-direction: column;
 	justify-content: flex-start;
-	/* align-items: center; */
 	padding: 12px;
 	height: 474px;
 	width: 256px;

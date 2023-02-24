@@ -2,8 +2,6 @@ import styled from 'styled-components';
 import { mainTheme } from '../../styles/theme';
 
 export const Select = styled.select`
-    /* padding: 14px 58px 14px 16px; */
-    
     display: flex;
     flex-direction: row;
     justify-content: space-between;

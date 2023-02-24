@@ -15,14 +15,14 @@ import {
 } from './Navbar.elements';
 import { WalletButton } from './WalletButton.elements';
 
-export const Navbar = () => {
+export const Navbar = (): JSX.Element => {
 	const [showMobileMenu, setShowMobileMenu] = useState(false);
 	const [walletConnected, setWalletConnected] = useState(false);
 	const [showNavbarBackgroundColor, setShowNavbarBackgroundColor] =
 		useState(false);
 
 	useEffect(() => {
-		const changeNavBackgroundColor = () => {
+		const changeNavBackgroundColor = (): void => {
 			if (window.scrollY >= 50) {
 				setShowNavbarBackgroundColor(true);
 			} else {
@@ -37,7 +37,7 @@ export const Navbar = () => {
 		};
 	}, []);
 
-	const goToTop = () => {
+	const goToTop = (): void => {
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',

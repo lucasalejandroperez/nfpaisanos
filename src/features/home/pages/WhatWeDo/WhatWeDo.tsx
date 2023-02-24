@@ -1,6 +1,6 @@
 import { SimpleContainer } from '../../../../components/Container/SimpleContainer.elements';
 
-export const WhatWeDo = () => {
+export const WhatWeDo = (): JSX.Element => {
 	return (
 		<SimpleContainer>
 			<h1>We hired Lucas Perez instantly!</h1>

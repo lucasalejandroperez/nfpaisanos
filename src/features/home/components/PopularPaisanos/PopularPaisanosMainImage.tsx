@@ -12,7 +12,7 @@ export const PopularPaisanosMainImage = (): JSX.Element => {
 
 	return (
 		<PopularPaisanosMainImageContainer>
-			{!loading && data && (
+			{!loading && (
 				<img
 					src={data[popularPaisanoSelectedIndex].media.image}
 					alt={data[popularPaisanoSelectedIndex].author}

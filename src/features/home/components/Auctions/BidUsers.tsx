@@ -11,18 +11,17 @@ export const BidUsers = ({ auction }: Props): JSX.Element => {
 	return (
 		<BidUsersContainer>
 			<div>
-				{auction.bidUsers &&
-					auction.bidUsers.map(bid => (
-						<span key={`${bid.id}-${bid.name}`}>
-							<Avatar
-								src={bid.avatar}
-								alt={bid.name}
-								width='25'
-								height='30'
-								backgroundColor={mainTheme.darkColor}
-							/>
-						</span>
-					))}
+				{auction.bidUsers.map(bid => (
+					<span key={`${bid.id}-${bid.name}`}>
+						<Avatar
+							src={bid.avatar}
+							alt={bid.name}
+							width='25'
+							height='30'
+							backgroundColor={mainTheme.darkColor}
+						/>
+					</span>
+				))}
 			</div>
 			<div>{auction.stock} in stock</div>
 		</BidUsersContainer>

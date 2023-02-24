@@ -2,7 +2,7 @@ interface Props {
 	fillColor: string;
 }
 
-export const LeftSwiperSvg = ({ fillColor }: Props) => {
+export const LeftSwiperSvg = ({ fillColor }: Props): JSX.Element => {
 	return (
 		<svg
 			width='14'

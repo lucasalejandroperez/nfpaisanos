@@ -10,7 +10,7 @@ export const RangeSlider = (): JSX.Element => {
 
 	const formatLabel = (value: number): string => `${value} ETH`;
 
-	const handleChangeHorizontal = (value: number) => {
+	const handleChangeHorizontal = (value: number): void => {
 		setHorizontal(value);
 
 		dispatch(filterByPrice(value));

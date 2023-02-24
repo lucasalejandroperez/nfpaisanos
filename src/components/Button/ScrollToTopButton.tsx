@@ -7,7 +7,7 @@ import {
 export const ScrollToTopButton = (): JSX.Element => {
 	const [showScrollToTopButton, setShowScrollToTopButton] = useState(false);
 
-	const changeScrollToTop = () => {
+	const changeScrollToTop = (): void => {
 		if (window.scrollY > 400) {
 			setShowScrollToTopButton(true);
 		} else {
@@ -23,7 +23,7 @@ export const ScrollToTopButton = (): JSX.Element => {
 		};
 	}, []);
 
-	const goToTop = () => {
+	const goToTop = (): void => {
 		window.scrollTo({
 			top: 0,
 			behavior: 'smooth',

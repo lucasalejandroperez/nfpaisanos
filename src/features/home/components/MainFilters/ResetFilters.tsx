@@ -2,10 +2,10 @@ import { useAppDispatch } from '../../../../hooks/redux-hooks';
 import { resetFilters } from '../../../../redux/slices/auctionSlice';
 import { ResetFilterContainer } from './ResetFilter.elements';
 
-export const ResetFilters = () => {
+export const ResetFilters = (): JSX.Element => {
 	const dispatch = useAppDispatch();
 
-	const handleResetClick = () => {
+	const handleResetClick = (): void => {
 		dispatch(resetFilters());
 	};
 

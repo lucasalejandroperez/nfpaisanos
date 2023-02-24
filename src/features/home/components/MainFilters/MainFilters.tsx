@@ -27,7 +27,7 @@ export const MainFilters = (): JSX.Element => {
 		optionsLikes[0]
 	);
 
-	const handleSelectedLikesChange = (newValue: any) => {
+	const handleSelectedLikesChange = (newValue: any): void => {
 		setSelectedLikesOption(newValue);
 	};
 
